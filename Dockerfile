@@ -3,9 +3,11 @@ FROM node:16.13.0-alpine3.14 as build
 
 WORKDIR /app
 
-COPY . /app
+COPY package.json /app
 
 RUN npm install
+
+COPY . /app
 
 RUN npm run build --prod
 
