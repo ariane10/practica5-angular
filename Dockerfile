@@ -9,7 +9,7 @@ RUN npm install
 
 COPY . /app
 
-RUN npm run build --prod
+RUN ng build
 
 # Step 2
 FROM nginx:1.17.1-alpine
